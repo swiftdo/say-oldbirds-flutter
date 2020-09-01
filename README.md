@@ -1,16 +1,10 @@
 # say_oldbirds_flutter
 
-A new Flutter project.
+[oldbirds/say-oldbirds](https://github.com/swiftdo/say-oldbirds) 的 Flutter 版本的 web 站点。
 
-## Getting Started
+已成功部署到 github pages，可直接访问 [https://oldbird.run/say-oldbirds-flutter](https://oldbird.run/say-oldbirds-flutter/#/)
 
-This project is a starting point for a Flutter application.
+## Flutter for Web
 
-A few resources to get you started if this is your first Flutter project:
+Flutter 创建 web 项目步骤请移步到官方文档 [Building a web application with Flutter](https://flutter.dev/docs/get-started/web)。
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
