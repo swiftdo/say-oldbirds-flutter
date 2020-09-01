@@ -8,3 +8,6 @@
 
 Flutter 创建 web 项目步骤请移步到官方文档 [Building a web application with Flutter](https://flutter.dev/docs/get-started/web)。
 
+## 如何将 flutter web 部署到 github pages?
+* [在 github 上部署一个 web 应用](https://mp.weixin.qq.com/s/i864_-vEpD9vLHUrvLPz2w)
+
