@@ -1,6 +1,6 @@
 # say_oldbirds_flutter
 
-[oldbirds/say-oldbirds](https://github.com/swiftdo/say-oldbirds) 的 Flutter 版本的 web 站点。
+[swiftdo/say-oldbirds](https://github.com/swiftdo/say-oldbirds) 的 Flutter 版本的 web 站点。
 
 已成功部署到 github pages，可直接访问 [https://oldbird.run/say-oldbirds-flutter](https://oldbird.run/say-oldbirds-flutter/#/)
 
