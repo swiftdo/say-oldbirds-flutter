@@ -7,7 +7,6 @@
 已成功部署到 github pages，可直接访问 [https://oldbird.run/say-oldbirds-flutter](https://oldbird.run/say-oldbirds-flutter/#/)
 
 ## Flutter for Web
-
 Flutter 创建 web 项目步骤请移步到官方文档 [Building a web application with Flutter](https://flutter.dev/docs/get-started/web)。
 
 ## 如何将 flutter web 部署到 github pages?
