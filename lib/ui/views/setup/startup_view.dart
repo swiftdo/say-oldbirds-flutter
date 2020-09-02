@@ -12,6 +12,7 @@ class StartupView extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => model.navigateToHome(),
+          child: Icon(Icons.navigate_next),
         ),
       ),
       viewModelBuilder: () => StartupViewModel(),
