@@ -1,14 +1,14 @@
+import 'package:say_oldbirds_flutter/app/locator.dart';
+import 'package:say_oldbirds_flutter/datamodels/message.dart';
+import 'package:say_oldbirds_flutter/datamodels/response.dart';
+import 'package:say_oldbirds_flutter/services/messages_service.dart';
 import 'package:stacked/stacked.dart';
 
-class HomeViewModel extends BaseViewModel {
-  String _title = 'Home View';
-  String get title => '$_title counter:$counter';
+class HomeViewModel extends FutureViewModel<Response<Messages>> {
+  final _messagesServer = locator<MessagesService>();
 
-  int _counter = 0;
-  int get counter => _counter;
-
-  void updateCounter() {
-    _counter++;
-    notifyListeners();
+  @override
+  Future<Response<Messages>> futureToRun() {
+    return _messagesServer.getMessages();
   }
 }
