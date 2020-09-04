@@ -15,4 +15,13 @@ class Api {
     Map result = json.decode(response.body);
     return Response<Messages>.fromJson(result, parse: (data) => Messages.fromJson(data));
   }
+
+  Future<Response<Message>> uploadMessage({String name, String body}) async {
+    final response = await client.post('$endPoint/create', body: {
+      'name': name,
+      'body': body,
+    });
+    Map result = json.decode(response.body);
+    return Response<Message>.fromJson(result, parse: (data) => Message.fromJson(data));
+  }
 }
