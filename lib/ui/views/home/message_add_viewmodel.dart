@@ -8,6 +8,9 @@ class MessageAddViewModel extends ReactiveViewModel {
 
   List<Message> get messages => _messageServer.messages;
 
+  @override
+  List<ReactiveServiceMixin> get reactiveServices => [_messageServer];
+
   String name;
   String message;
 
@@ -15,9 +18,5 @@ class MessageAddViewModel extends ReactiveViewModel {
     await _messageServer.addMessage(name: name, message: message);
     name = null;
     message = null;
-    notifyListeners();
   }
-
-  @override
-  List<ReactiveServiceMixin> get reactiveServices => [_messageServer];
 }

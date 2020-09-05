@@ -18,15 +18,15 @@ class MessagesService with ReactiveServiceMixin {
     listenToReactiveValues([_messages]);
   }
 
-  Future<Response<Messages>> getMessages() async {
+  getMessages() async {
     final response = await _api.getMessages();
     _messages.value = response.data.messages;
-    return response;
   }
 
-  Future<Response<Message>> addMessage({String name, String message}) async {
+  addMessage({String name, String message}) async {
     final response = await _api.addMessage(name: name, body: message);
-    _messages.value.insert(0, response.data);
-    return response;
+    List<Message> mes = List.from(messages);
+    mes.insert(0, response.data);
+    _messages.value = mes; // 只有这样才会触发
   }
 }

@@ -22,6 +22,7 @@ class Api {
       'body': body,
     });
     Map result = json.decode(response.body);
+    print(result);
     return Response<Message>.fromJson(result, parse: (data) => Message.fromJson(data));
   }
 }

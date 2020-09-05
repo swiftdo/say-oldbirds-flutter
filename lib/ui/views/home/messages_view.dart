@@ -10,10 +10,13 @@ class MessagesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<MessagesViewModel>.reactive(
       viewModelBuilder: () => MessagesViewModel(),
-      disposeViewModel: false,
+      fireOnModelReadyOnce: true,
+      onModelReady: (model) async {
+        await model.initialise();
+      },
       builder: (context, model, child) {
         Widget body;
-        if (model.isBusy) {
+        if (model.messages == null || model.messages.length == 0) {
           body = SliverToBoxAdapter(
             child: Center(
               child: Container(
