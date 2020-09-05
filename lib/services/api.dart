@@ -16,7 +16,7 @@ class Api {
     return Response<Messages>.fromJson(result, parse: (data) => Messages.fromJson(data));
   }
 
-  Future<Response<Message>> uploadMessage({String name, String body}) async {
+  Future<Response<Message>> addMessage({String name, String body}) async {
     final response = await client.post('$endPoint/create', body: {
       'name': name,
       'body': body,
